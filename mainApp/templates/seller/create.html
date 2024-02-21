@@ -1,0 +1,233 @@
+{% extends "front/brands.html" %}
+{%load static%}
+{%block body%}
+<section class="pt-4 mb-4">
+   <div class="container text-center">
+      <div class="row">
+         <div class="col-lg-6 text-center text-lg-left">
+            
+         </div>
+         <div class="col-lg-6">
+            <ul class="breadcrumb bg-transparent p-0 justify-content-center justify-content-lg-end">
+               <li class="breadcrumb-item has-transition opacity-50 hov-opacity-100">
+                  <a class="text-reset" href="https://romegamart.in">Home</a>
+               </li>
+               <li class="text-dark fw-600 breadcrumb-item">
+                  "Register Your Shop"
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="pt-4 mb-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-xxl-5 col-xl-6 col-md-8 mx-auto">
+            <h1 class="fw-700 fs-20 fs-md-24 text-dark text-center mb-3">Register Your Shop</h1>
+            <form id="shop" class="" action="https://romegamart.in/shops" method="POST" enctype="multipart/form-data">
+               <input type="hidden" name="_token" value="57TijdjBwiFOl6AxJWsm2QZu8YuPyYdrCvYdpDJX">               <div class="bg-white border mb-4">
+                  <div class="p-3">
+                     <div class="form-group">
+                        <label>Your name <span class="text-primary">*</span></label>
+                        <input type="text" class="form-control rounded-0" value="" placeholder="Name" name="name" required>
+                                             </div>
+                     <!--<div class="form-group">-->
+                     <!--   <label>Contact No <span class="text-primary">*</span></label>-->
+                     <!--   <input type="tel" class="form-control rounded-0" minlength="10" maxlength="10" value="" placeholder="Contact No" pattern="[0-9]{10}" name="contact_no" required>-->
+                     <!--</div>-->
+                     <!-- Email or Phone -->
+                       <!-- Email or Phone -->
+                                            <div class="form-group phone-form-group mb-4">
+                            <label for="phone" class="fs-12 fw-700 text-soft-dark">Confirm Phone  <span class="text-primary">*</span></label>
+                            <input type="tel" id="phone-code" class="form-control rounded-0" value="" placeholder="" name="phone" autocomplete="off" required>
+                        </div>
+
+                        <input type="hidden" name="country_code" value="">
+
+                        <div class="form-group email-form-group mb-4 d-none">
+                            <label for="email" class="fs-12 fw-700 text-soft-dark">Confirm Email</label>
+                            <input type="email" class="form-control rounded-0 " value="" placeholder="Email" name="email"  autocomplete="off">
+                                                    </div>
+
+                        <div class="form-group text-right">
+                            <button class="btn btn-link p-0 text-primary" type="button" onclick="toggleEmailPhone(this)"><i>*Use Email Instead</i></button>
+                        </div>
+                    
+
+
+                     <div class="form-group d-none">
+                        <!--<label>Your Email <span class="text-primary">*</span></label>-->
+                        <input type="email" class="form-control rounded-0" value="test@email.com" placeholder="Email" name="email" readonly>
+                                             </div>
+                     <div class="form-group">
+                        <label>Company Name<span class="text-primary">*</span></label>
+                        <input type="text" class="form-control rounded-0" value="" placeholder="Shop Name" name="shop_name" required>
+                                             </div>
+                     <div class="form-group">
+                        <label>Brand Name <span class="text-primary">*</span></label>
+                        <input type="text" class="form-control rounded-0" value="" placeholder="Brand Name" name="brand_name" required>
+                     </div>
+                     <div class="form-group">
+                        <label>Your Password <span class="text-primary">*</span></label>
+                        <input type="password" class="form-control rounded-0" value="" placeholder="Password" name="password" required>
+                                             </div>
+                     <div class="form-group">
+                        <label>Repeat Password <span class="text-primary">*</span></label>
+                        <input type="password" class="form-control rounded-0" placeholder="Confirm Password" name="password_confirmation" required>
+                     </div>
+                     <div class="form-group">
+                        <label>Address <span class="text-primary">*</span></label>
+                        <input type="text" class="form-control mb-3 rounded-0" value="" placeholder="Address" name="address" required>
+                                             </div>
+                     <div class="form-group">
+                        <label>Alternate Number <span class="text-primary"></span></label>
+                        <input type="number" class="form-control mb-3 rounded-0" pattern="[0-9]{10}" value="" placeholder="Alternate Number" name="alt_no">
+                                             </div>
+               </div>
+               
+            <!--</form>-->
+            
+            <!--<form class="" action="https://romegamart.in/seller/shop/verification_info_store" method="POST" enctype="multipart/form-data">-->
+                <input type="hidden" name="_token" value="57TijdjBwiFOl6AxJWsm2QZu8YuPyYdrCvYdpDJX">                <!--<div class="card">-->
+                    <!--<div class="card-header">-->
+                    <!--    <h4 class="mb-0 h6">Verification Info</h4>-->
+                    <!--</div>-->
+                                        <div class="card-body">
+                                                    
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                        
+                               <div class="form-group">
+                                <label for="file-6" class="fs-12 fw-700 text-soft-dark">GST Certificate <span class="text-primary">*</span></label>
+                                <div class="custom-file">
+                                    <label class="custom-file-label">
+                                        <input type="file" name="element_6" id="file-6" class="custom-file-input" required>
+                                        <span class="custom-file-name">Choose File</span>
+                                    </label>
+                                </div>
+                             </div>
+                                                                                
+                                                        
+                               <div class="form-group">
+                                <label for="file-7" class="fs-12 fw-700 text-soft-dark">Udhyam Certificate <span class="text-primary">*</span></label>
+                                <div class="custom-file">
+                                    <label class="custom-file-label">
+                                        <input type="file" name="element_7" id="file-7" class="custom-file-input" required>
+                                        <span class="custom-file-name">Choose File</span>
+                                    </label>
+                                </div>
+                             </div>
+                                                                                
+                                                        
+                               <div class="form-group">
+                                <label for="file-8" class="fs-12 fw-700 text-soft-dark">Cancelled Check <span class="text-primary">*</span></label>
+                                <div class="custom-file">
+                                    <label class="custom-file-label">
+                                        <input type="file" name="element_8" id="file-8" class="custom-file-input" required>
+                                        <span class="custom-file-name">Choose File</span>
+                                    </label>
+                                </div>
+                             </div>
+                                                                                
+                                                        
+                               <div class="form-group">
+                                <label for="file-9" class="fs-12 fw-700 text-soft-dark">Pan Card <span class="text-primary">*</span></label>
+                                <div class="custom-file">
+                                    <label class="custom-file-label">
+                                        <input type="file" name="element_9" id="file-9" class="custom-file-input" required>
+                                        <span class="custom-file-name">Choose File</span>
+                                    </label>
+                                </div>
+                             </div>
+                                                                                
+                                                        
+                               <div class="form-group">
+                                <label for="file-10" class="fs-12 fw-700 text-soft-dark">Aadhar Card <span class="text-primary">*</span></label>
+                                <div class="custom-file">
+                                    <label class="custom-file-label">
+                                        <input type="file" name="element_10" id="file-10" class="custom-file-input" required>
+                                        <span class="custom-file-name">Choose File</span>
+                                    </label>
+                                </div>
+                             </div>
+                                                                            <!--<div class="text-right mt-4">-->
+                        <!--    <button type="submit" class="btn btn-primary">Apply</button>-->
+                        <!--</div>-->
+                    </div>
+                <!--</div>-->
+                <!-- Terms and Conditions -->
+                <div class="mb-3 px-3">
+                    <label class="aiz-checkbox">
+                        <input type="checkbox" name="checkbox_example_1" required>
+                        <span class="">By signing up you agree to our <a href="https://romegamart.in/terms" class="fw-500">terms and conditions</a></span>
+                        <span class="aiz-square-check"></span>
+                    </label>
+                </div>
+                               <div class="text-right">
+                  <button type="submit" class="btn btn-primary fw-600 rounded-0">Register Your Shop</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+
+     
+    <script type="text/javascript">
+        // Country Code
+        var isPhoneShown = true,
+            countryData = window.intlTelInputGlobals.getCountryData(),
+            input = document.querySelector("#phone-code");
+    
+        for (var i = 0; i < countryData.length; i++) {
+            var country = countryData[i];
+            if (country.iso2 == 'bd') {
+                country.dialCode = '88';
+            }
+        }
+    
+        var iti = intlTelInput(input, {
+            separateDialCode: true,
+            utilsScript: "/public/assets/js/intlTelutils.js?1590403638580",
+            onlyCountries: ["IN"],
+            customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+                if (selectedCountryData.iso2 == 'bd') {
+                    return "01xxxxxxxxx";
+                }
+                return selectedCountryPlaceholder;
+            }
+        });
+    
+        var country = iti.getSelectedCountryData();
+        $('input[name=country_code]').val(country.dialCode);
+    
+        input.addEventListener("countrychange", function (e) {
+            // var currentMask = e.currentTarget.placeholder;
+            var country = iti.getSelectedCountryData();
+            $('input[name=country_code]').val(country.dialCode);
+    
+        });
+    
+        function toggleEmailPhone(el) {
+            if (isPhoneShown) {
+                $('.phone-form-group').addClass('d-none');
+                $('.email-form-group').removeClass('d-none');
+                $('input[name=phone]').val(null);
+                isPhoneShown = false;
+                $(el).html('*Use Phone Instead');
+            } else {
+                $('.phone-form-group').removeClass('d-none');
+                $('.email-form-group').addClass('d-none');
+                $('input[name=email]').val(null);
+                isPhoneShown = true;
+                $(el).html('<i>*Use Email Instead</i>');
+            }
+        }
+    </script>
+    
+    {%endblock%}

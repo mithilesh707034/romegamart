@@ -1,0 +1,1984 @@
+{% extends "front/brands.html" %}
+{%load static%}
+{%block body%}
+
+<section class="mb-4 pt-4">
+    <div class="container sm-px-0 pt-2">
+        <form class="" id="search-form" action="" method="GET">
+            <div class="row">
+
+                <!-- Sidebar Filters -->
+                <div class="col-xl-3">
+                    <div class="aiz-filter-sidebar collapse-sidebar-wrap sidebar-xl sidebar-right z-1035">
+                        <div class="overlay overlay-fixed dark c-pointer" data-toggle="class-toggle"
+                            data-target=".aiz-filter-sidebar" data-same=".filter-sidebar-thumb"></div>
+                        <div class="collapse-sidebar c-scrollbar-light text-left">
+                            <div class="d-flex d-xl-none justify-content-between align-items-center pl-3 border-bottom">
+                                <h3 class="h6 mb-0 fw-600">Filters</h3>
+                                <button type="button" class="btn btn-sm p-2 filter-sidebar-thumb"
+                                    data-toggle="class-toggle" data-target=".aiz-filter-sidebar">
+                                    <i class="las la-times la-2x"></i>
+                                </button>
+                            </div>
+
+                            <!-- Categories -->
+                            <div class="bg-white border mb-3">
+                                <div class="fs-16 fw-700 p-3">
+                                    <a href="#collapse_1"
+                                        class="dropdown-toggle filter-section text-dark d-flex align-items-center justify-content-between"
+                                        data-toggle="collapse">
+                                        Categories
+                                    </a>
+                                </div>
+                                <div class="collapse show" id="collapse_1">
+                                    <ul class="p-3 mb-0 list-unstyled">
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/domestic-spares">Domestic
+                                                Spares</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/industrial-spares">Industrial
+                                                Spares</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/domestic-systems">Domestic
+                                                Systems</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/industrial-systems">Industrial
+                                                Systems</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/domestic-brands">Domestic
+                                                Brands</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/industial-brands">Industial
+                                                Brands</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/water-softeners">Water
+                                                Softeners</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/cooling-ro">Cooling Ro</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/water-atm">Water ATM</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/commercial-systems">Commercial
+                                                Systems</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/bottling-plant">Bottling Plant</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/water-treatment">Water
+                                                Treatment</a>
+                                        </li>
+                                        <li class="mb-3 text-dark">
+                                            <a class="text-reset fs-14 hov-text-primary"
+                                                href="https://romegamart.in/category/etp-stp-zld">ETP/STP/ZLD</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Price range -->
+                            <div class="bg-white border mb-3">
+                                <div class="fs-16 fw-700 p-3">
+                                    Price range
+                                </div>
+                                <div class="p-3 mr-3">
+                                    <div class="aiz-range-slider">
+                                        <div id="input-slider-range" data-range-value-min=" 8 "
+                                            data-range-value-max=" 4900000 "></div>
+
+                                        <div class="row mt-2">
+                                            <div class="col-6">
+                                                <span class="range-slider-value value-low fs-14 fw-600 opacity-70"
+                                                    data-range-value-low="22" id="input-slider-range-value-low"></span>
+                                            </div>
+                                            <div class="col-6 text-right">
+                                                <span class="range-slider-value value-high fs-14 fw-600 opacity-70"
+                                                    data-range-value-high="2000"
+                                                    id="input-slider-range-value-high"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Hidden Items -->
+                                <input type="hidden" name="min_price" value="">
+                                <input type="hidden" name="max_price" value="">
+                            </div>
+
+                            <!-- Attributes -->
+                            <div class="bg-white border mb-3">
+                                <div class="fs-16 fw-700 p-3">
+                                    <a href="#"
+                                        class="dropdown-toggle text-dark filter-section collapsed d-flex align-items-center justify-content-between"
+                                        data-toggle="collapse" data-target="#collapse_Size"
+                                        style="white-space: normal;">
+                                        Size
+                                    </a>
+                                </div>
+                                <div class="collapse " id="collapse_Size">
+                                    <div class="p-3 aiz-checkbox-list">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white border mb-3">
+                                <div class="fs-16 fw-700 p-3">
+                                    <a href="#"
+                                        class="dropdown-toggle text-dark filter-section collapsed d-flex align-items-center justify-content-between"
+                                        data-toggle="collapse" data-target="#collapse_Color"
+                                        style="white-space: normal;">
+                                        Color
+                                    </a>
+                                </div>
+                                <div class="collapse " id="collapse_Color">
+                                    <div class="p-3 aiz-checkbox-list">
+                                        <label class="aiz-checkbox mb-3">
+                                            <input type="checkbox" name="selected_attribute_values[]" value="Blue"
+                                                onchange="filter()">
+                                            <span class="aiz-square-check"></span>
+                                            <span class="fs-14 fw-400 text-dark">Blue</span>
+                                        </label>
+                                        <label class="aiz-checkbox mb-3">
+                                            <input type="checkbox" name="selected_attribute_values[]" value="White"
+                                                onchange="filter()">
+                                            <span class="aiz-square-check"></span>
+                                            <span class="fs-14 fw-400 text-dark">White</span>
+                                        </label>
+                                        <label class="aiz-checkbox mb-3">
+                                            <input type="checkbox" name="selected_attribute_values[]" value="Black"
+                                                onchange="filter()">
+                                            <span class="aiz-square-check"></span>
+                                            <span class="fs-14 fw-400 text-dark">Black</span>
+                                        </label>
+                                        <label class="aiz-checkbox mb-3">
+                                            <input type="checkbox" name="selected_attribute_values[]" value="Grey"
+                                                onchange="filter()">
+                                            <span class="aiz-square-check"></span>
+                                            <span class="fs-14 fw-400 text-dark">Grey</span>
+                                        </label>
+                                        <label class="aiz-checkbox mb-3">
+                                            <input type="checkbox" name="selected_attribute_values[]" value="Orange"
+                                                onchange="filter()">
+                                            <span class="aiz-square-check"></span>
+                                            <span class="fs-14 fw-400 text-dark">Orange</span>
+                                        </label>
+                                        <label class="aiz-checkbox mb-3">
+                                            <input type="checkbox" name="selected_attribute_values[]" value="Yellow"
+                                                onchange="filter()">
+                                            <span class="aiz-square-check"></span>
+                                            <span class="fs-14 fw-400 text-dark">Yellow</span>
+                                        </label>
+                                        <label class="aiz-checkbox mb-3">
+                                            <input type="checkbox" name="selected_attribute_values[]" value="Red"
+                                                onchange="filter()">
+                                            <span class="aiz-square-check"></span>
+                                            <span class="fs-14 fw-400 text-dark">Red</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Color -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contents -->
+                <div class="col-xl-9">
+
+                    <!-- Breadcrumb -->
+                    <ul class="breadcrumb bg-transparent py-0 px-1">
+                        <li class="breadcrumb-item has-transition opacity-50 hov-opacity-100">
+                            <a class="text-reset" href="/">Home</a>
+                        </li>
+                        <li class="breadcrumb-item fw-700  text-dark">
+                            "All categories"
+                        </li>
+                    </ul>
+
+                    <!-- Top Filters -->
+                    <div class="text-left">
+                        <div class="row gutters-5 flex-wrap align-items-center">
+                            <div class="col-lg col-10">
+                                <h1 class="fs-20 fs-md-24 fw-700 text-dark">
+                                    All products
+                                </h1>
+                                <input type="hidden" name="keyword" value="">
+                            </div>
+                            <div class="col-2 col-lg-auto d-xl-none mb-lg-3 text-right">
+                                <button type="button" class="btn btn-icon p-0" data-toggle="class-toggle"
+                                    data-target=".aiz-filter-sidebar">
+                                    <i class="la la-filter la-2x"></i>
+                                </button>
+                            </div>
+
+                            <div class="col-6 col-lg-auto mb-3 w-lg-200px">
+                                <select class="form-control form-control-sm aiz-selectpicker rounded-0" name="sort_by"
+                                    onchange="filter()">
+                                    <option value="">Sort by</option>
+                                    <option value="newest">Newest</option>
+                                    <option value="oldest">Oldest</option>
+                                    <option value="price-asc">Price low to high</option>
+                                    <option value="price-desc">Price high to low</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="px-3">
+                        <div
+                            class="row gutters-16 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-4 row-cols-md-3 row-cols-2 border-top border-left">
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="/product-details"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/VmjK5xrjSZ7VsqXzC0ywFEt4rPNJRqYVYUi4PquB.jpg"
+                                                alt="20 inch Spanner RO Membrane Housing RO 200 Pcs in 1 Packet - ASTER INDUSTRIES"
+                                                title="20 inch Spanner RO Membrane Housing RO 200 Pcs in 1 Packet - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(1014)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="/product-details"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="20 inch Spanner RO Membrane Housing RO 200 Pcs in 1 Packet - ASTER INDUSTRIES">20
+                                                inch Spanner RO Membrane Housing RO 200 Pcs in 1 Packet - ASTER
+                                                INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="/product-details"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/rPPLzHkQ5Zl0XmwKhi4HGev9nA3Ifo8vFLhWUjoK.jpg"
+                                                alt="10 inch Spanner For Domestic RO 200 Pcs in 1 Packet - ASTER INDUSTRIES"
+                                                title="10 inch Spanner For Domestic RO 200 Pcs in 1 Packet - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(1012)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="/product-details"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="10 inch Spanner For Domestic RO 200 Pcs in 1 Packet - ASTER INDUSTRIES">10
+                                                inch Spanner For Domestic RO 200 Pcs in 1 Packet - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="/product-details"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/nOcggX6LbcgwCDJ9KrPnqlIFF7Bm8X9Dv5r3OfAb.jpg"
+                                                alt="X Clamp For Domestic RO 2 Inch 1000 PCS In 1 Packet - ASTER INDUSTRIES"
+                                                title="X Clamp For Domestic RO 2 Inch 1000 PCS In 1 Packet - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(1009)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/x-clamp-for-domestic-ro-2-inch-1000-pcs-in-1-packet-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="X Clamp For Domestic RO 2 Inch 1000 PCS In 1 Packet - ASTER INDUSTRIES">X
+                                                Clamp For Domestic RO 2 Inch 1000 PCS In 1 Packet - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/c-clamp-uses-in-domestic-ro-1000-pcs-in-1-packet-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/M68xLwHdR4nB2QWZC8oIQrd70vEtf358FUxE7CRK.jpg"
+                                                alt="C Clamp Uses in Domestic RO 1000 PCS In 1 Packet - ASTER INDUSTRIES"
+                                                title="C Clamp Uses in Domestic RO 1000 PCS In 1 Packet - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(1005)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/c-clamp-uses-in-domestic-ro-1000-pcs-in-1-packet-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="C Clamp Uses in Domestic RO 1000 PCS In 1 Packet - ASTER INDUSTRIES">C
+                                                Clamp Uses in Domestic RO 1000 PCS In 1 Packet - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/plastic-pump-head-black-color-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/BCcacRn9dBuodG0uE5xa2wCGR0kfiI72Yhrcegdz.png"
+                                                alt="Plastic Pump Head Black Color - ASTER INDUSTRIES"
+                                                title="Plastic Pump Head Black Color - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(651)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/plastic-pump-head-black-color-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Plastic Pump Head Black Color - ASTER INDUSTRIES">Plastic Pump
+                                                Head Black Color - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/white-color-plastic-pump-head-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/HjvDfDjx08gSxsGncqZf1hBcFuGu4La1FTc6KamE.jpg"
+                                                alt="White Color Plastic Pump Head - ASTER INDUSTRIES"
+                                                title="White Color Plastic Pump Head - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(650)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/white-color-plastic-pump-head-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="White Color Plastic Pump Head - ASTER INDUSTRIES">White Color
+                                                Plastic Pump Head - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/aster-industries-25-ampere-smps-for-domestic-ro"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/tXHOZDq0pxgs46rb3qFkCHXdgcvbm5HFERdcjZhb.jpg"
+                                                alt="Aster Industries 2.5 Ampere SMPS For Domestic RO"
+                                                title="Aster Industries 2.5 Ampere SMPS For Domestic RO">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(649)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/aster-industries-25-ampere-smps-for-domestic-ro"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Aster Industries 2.5 Ampere SMPS For Domestic RO">Aster
+                                                Industries 2.5 Ampere SMPS For Domestic RO</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/2-side-spanner-for-membrane-housing-in-ro-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/cqw4bvptlxvr2AhemTZ5eAnfc4f58bDIXiMlDrpG.jpg"
+                                                alt="2 Side Spanner For Membrane Housing in RO - ASTER INDUSTRIES"
+                                                title="2 Side Spanner For Membrane Housing in RO - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(643)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/2-side-spanner-for-membrane-housing-in-ro-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="2 Side Spanner For Membrane Housing in RO - ASTER INDUSTRIES">2
+                                                Side Spanner For Membrane Housing in RO - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/dor-grey-membrane-housing-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/hvylxIx3ry6cyO27IakqFxqaKvZ3exJ7yPmGxJZO.jpg"
+                                                alt="DOR Grey Membrane Housing - ASTER INDUSTRIES"
+                                                title="DOR Grey Membrane Housing - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(637)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/dor-grey-membrane-housing-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="DOR Grey Membrane Housing - ASTER INDUSTRIES">DOR Grey Membrane
+                                                Housing - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/membrane-housing-dor-silicon-240-gram-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/19LuUzGsAwBbCMKVwD49T3xyz1ZPxbbgLRy1difh.jpg"
+                                                alt="DOR Silicon Membrane Housing 240 Gram - ASTER INDUSTRIES"
+                                                title="DOR Silicon Membrane Housing 240 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(636)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/membrane-housing-dor-silicon-240-gram-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="DOR Silicon Membrane Housing 240 Gram - ASTER INDUSTRIES">DOR
+                                                Silicon Membrane Housing 240 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/double-o-ring-bowl-grey-540-gram-grey-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/tFrBb6TQ7mGUj2clApLYu6xPToi1viZTRcNTpyd4.jpg"
+                                                alt="Double O Ring Bowl Grey 540 Gram - ASTER INDUSTRIES"
+                                                title="Double O Ring Bowl Grey 540 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(633)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/double-o-ring-bowl-grey-540-gram-grey-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Double O Ring Bowl Grey 540 Gram - ASTER INDUSTRIES">Double O
+                                                Ring Bowl Grey 540 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/double-o-ring-bowl-540-gram-virgin-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/I6oOwJyRnMHjaqmdgcTnTmXEZzcqNDRHvfady4Sj.jpg"
+                                                alt="Double O Ring Bowl Virgin  540 Gram - ASTER INDUSTRIES"
+                                                title="Double O Ring Bowl Virgin  540 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(632)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/double-o-ring-bowl-540-gram-virgin-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Double O Ring Bowl Virgin  540 Gram - ASTER INDUSTRIES">Double O
+                                                Ring Bowl Virgin 540 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/dv-440-gram-virgin-filter-catridge---aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/YoiKe3cXUfSj7ytAaAsVsW2e8D5Qm8AxBEe6VxxE.png"
+                                                alt="DV virgin Filter Catridge 440 Gram - ASTER INDUSTRIES"
+                                                title="DV virgin Filter Catridge 440 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(631)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/dv-440-gram-virgin-filter-catridge---aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="DV virgin Filter Catridge 440 Gram - ASTER INDUSTRIES">DV virgin
+                                                Filter Catridge 440 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/dx-filter-cartridge-next-to-virgin-440-gram-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/Az5gOrOA8g6TJxlr8z9Ewe89ioYxMQNoqOtuD1Dq.jpg"
+                                                alt="DX Filter Cartridge Next to virgin 440 Gram - ASTER INDUSTRIES"
+                                                title="DX Filter Cartridge Next to virgin 440 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(629)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/dx-filter-cartridge-next-to-virgin-440-gram-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="DX Filter Cartridge Next to virgin 440 Gram - ASTER INDUSTRIES">DX
+                                                Filter Cartridge Next to virgin 440 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/ds-440-gram-semi-filter-catridge-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/t7yILaADhOaRAiBxeBW3LyD6yRm7aD1nMD7PfcIx.jpg"
+                                                alt="DS Semi Filter Catridge 440 Gram - ASTER INDUSTRIES"
+                                                title="DS Semi Filter Catridge 440 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(627)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/ds-440-gram-semi-filter-catridge-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="DS Semi Filter Catridge 440 Gram - ASTER INDUSTRIES">DS Semi
+                                                Filter Catridge 440 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/trn-filter-cartridge-370-gram-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/MqXLkPX3j8d6qfkBLPdb6ukhL8AIOWYdgFG0kdtm.jpg"
+                                                alt="TRN Filter Cartridge 370 Gram - ASTER INDUSTRIES"
+                                                title="TRN Filter Cartridge 370 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(626)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/trn-filter-cartridge-370-gram-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="TRN Filter Cartridge 370 Gram - ASTER INDUSTRIES">TRN Filter
+                                                Cartridge 370 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/fb-black-color-filter-cartridge-370-gram-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/A1dbqZ0zIV0lKr6OCa4aK6xwqAY0NwWDiQGsyG5b.jpg"
+                                                alt="FB Black Color Filter Cartridge 370 Gram - ASTER INDUSTRIES"
+                                                title="FB Black Color Filter Cartridge 370 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(624)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/fb-black-color-filter-cartridge-370-gram-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="FB Black Color Filter Cartridge 370 Gram - ASTER INDUSTRIES">FB
+                                                Black Color Filter Cartridge 370 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/fg-370-gram-grey-filter-cartridge-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/yFiJn1Ww9in4g4nb8C198KqRqMd0JQOlxziSxtxc.jpg"
+                                                alt="FG 370 Gram Grey Filter Cartridge - ASTER INDUSTRIES"
+                                                title="FG 370 Gram Grey Filter Cartridge - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(622)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/fg-370-gram-grey-filter-cartridge-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="FG 370 Gram Grey Filter Cartridge - ASTER INDUSTRIES">FG 370 Gram
+                                                Grey Filter Cartridge - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/fv-370-gram-filter-catridge-virgin-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/Vl6rcrpV8cW7CgnGgc4arFCUtPeZlMBm7HpgQzYM.jpg"
+                                                alt="FV virgin 370 Gram Filter Catridge - ASTER INDUSTRIES"
+                                                title="FV virgin 370 Gram Filter Catridge - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(620)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/fv-370-gram-filter-catridge-virgin-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="FV virgin 370 Gram Filter Catridge - ASTER INDUSTRIES">FV virgin
+                                                370 Gram Filter Catridge - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/fx-370-gram-filter-catridge-next-to-virgin-aster-industries"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/amI7rGfSasE03h9TCa2taumcyrsFpERvxnxgMQDh.jpg"
+                                                alt="FX Next To virgin Filter Catridge 370 Gram - ASTER INDUSTRIES"
+                                                title="FX Next To virgin Filter Catridge 370 Gram - ASTER INDUSTRIES">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(618)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/fx-370-gram-filter-catridge-next-to-virgin-aster-industries"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="FX Next To virgin Filter Catridge 370 Gram - ASTER INDUSTRIES">FX
+                                                Next To virgin Filter Catridge 370 Gram - ASTER INDUSTRIES</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/aster-industries-classic-fusion-advance-filter-catridge"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/AuhEsfQOxWr8u2ZuXAd8Uv6plUdJ7x413RxEofzI.jpg"
+                                                alt="Aster Industries Classic Fusion Advance Filter Catridge"
+                                                title="Aster Industries Classic Fusion Advance Filter Catridge">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(610)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/aster-industries-classic-fusion-advance-filter-catridge"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Aster Industries Classic Fusion Advance Filter Catridge">Aster
+                                                Industries Classic Fusion Advance Filter Catridge</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/aster-industries-platinum-carbon-filter-for-all-types-of-domestic-system"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/gqnSSJwSa8VR70bzWw1q2hiEVWY7LZA8wZC05v9J.jpg"
+                                                alt="Aster Industries Platinum Carbon Filter For All Types Of Domestic System"
+                                                title="Aster Industries Platinum Carbon Filter For All Types Of Domestic System">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(608)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/aster-industries-platinum-carbon-filter-for-all-types-of-domestic-system"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Aster Industries Platinum Carbon Filter For All Types Of Domestic System">Aster
+                                                Industries Platinum Carbon Filter For All Types Of Domestic System</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/aster-industries-300-gpd-booster-pump-use-in-industrial-ro"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/8e3IJgYtkLn9oByJz8QiS6eR9kvVEZeaSji3C9Dw.jpg"
+                                                alt="Aster Industries 300 GPD Booster Pump Use in Industrial RO"
+                                                title="Aster Industries 300 GPD Booster Pump Use in Industrial RO">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(604)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/aster-industries-300-gpd-booster-pump-use-in-industrial-ro"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Aster Industries 300 GPD Booster Pump Use in Industrial RO">Aster
+                                                Industries 300 GPD Booster Pump Use in Industrial RO</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right border-bottom has-transition hov-shadow-out z-1">
+                                <div class="aiz-card-box h-auto bg-white py-3 hov-scale-img">
+                                    <div class="position-relative h-140px h-md-200px img-fit overflow-hidden">
+                                        <!-- Image -->
+                                        <a href="https://romegamart.in/product/aster-industries-150-gpd-booster-pump-for-domestic-ro"
+                                            class="d-block h-100">
+                                            <img class="lazyload mx-auto img-fit has-transition"
+                                                src="https://romegamart.in/public/uploads/all/qc1QIZq6VrDVdsVx6kB8yFBioR3JXyyc1EXepTYD.jpg"
+                                                alt="Aster Industries 150 GPD Booster Pump For Domestic RO"
+                                                title="Aster Industries 150 GPD Booster Pump For Domestic RO">
+                                        </a>
+                                        <!-- Discount percentage tag -->
+                                        <!-- Wholesale tag -->
+                                        <span class="absolute-top-left fs-11 text-white fw-700 px-2 lh-1-8 ml-1 mt-1"
+                                            style="background-color: #455a64; ">
+                                            Wholesale
+                                        </span>
+                                        <!-- wishlisht & compare icons -->
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+                                            <a href="javascript:void(0)" class="hov-svg-white"
+                                                onclick="addToWishList(602)" data-toggle="tooltip"
+                                                data-title="Add to wishlist" data-placement="left">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.4"
+                                                    viewBox="0 0 16 14.4">
+                                                    <g id="_51a3dbe0e593ba390ac13cba118295e4"
+                                                        data-name="51a3dbe0e593ba390ac13cba118295e4"
+                                                        transform="translate(-3.05 -4.178)">
+                                                        <path id="Path_32649" data-name="Path 32649"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                        <path id="Path_32650" data-name="Path 32650"
+                                                            d="M11.3,5.507l-.247.246L10.8,5.506A4.538,4.538,0,1,0,4.38,11.919l.247.247,6.422,6.412,6.422-6.412.247-.247A4.538,4.538,0,1,0,11.3,5.507Z"
+                                                            transform="translate(0 0)" fill="#919199" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- add to cart -->
+                                    </div>
+
+                                    <div class="p-2 p-md-3 text-left">
+                                        <!-- Product name -->
+                                        <h3 class="fw-400 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px text-center">
+                                            <a href="https://romegamart.in/product/aster-industries-150-gpd-booster-pump-for-domestic-ro"
+                                                class="d-block text-reset hov-text-primary"
+                                                title="Aster Industries 150 GPD Booster Pump For Domestic RO">Aster
+                                                Industries 150 GPD Booster Pump For Domestic RO</a>
+                                        </h3>
+                                        <div class="fs-14 d-flex justify-content-center mt-3">
+                                            <!-- Previous price -->
+                                            <!-- price -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aiz-pagination mt-4">
+                        <nav>
+                            <ul class="pagination">
+
+                                <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
+                                    <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                                </li>
+
+
+
+
+
+                                <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                <li class="page-item"><a class="page-link"
+                                        href="https://romegamart.in/brand/ASTER-INDUSTRIES-o85B0?page=2">2</a></li>
+
+
+                                <li class="page-item">
+                                    <a class="page-link"
+                                        href="https://romegamart.in/brand/ASTER-INDUSTRIES-o85B0?page=2" rel="next"
+                                        aria-label="Next »">&rsaquo;</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<script>
+    var cityInput = document.getElementById("city");
+
+    if (cityInput) {
+        cityInput.addEventListener("input", function () {
+            this.value = this.value.replace(/[0-9]/g, '');
+        });
+    }
+
+    function showInqueryModal() {
+        $('#inquery_modal').modal();
+    }
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            if (null === true) {
+            } else {
+                showInqueryModal();
+            }
+        }, 10000);
+    });
+
+    $(document).ready(function () {
+        $('.category-nav-element').each(function (i, el) {
+            $(el).on('mouseover', function () {
+                if (!$(el).find('.sub-cat-menu').hasClass('loaded')) {
+                    $.post('https://romegamart.in/category/nav-element-list', { _token: AIZ.data.csrf, id: $(el).data('id') }, function (data) {
+                        $(el).find('.sub-cat-menu').addClass('loaded').html(data);
+                    });
+                }
+            });
+        });
+
+        if ($('#lang-change').length > 0) {
+            $('#lang-change .dropdown-menu a').each(function () {
+                $(this).on('click', function (e) {
+                    e.preventDefault();
+                    var $this = $(this);
+                    var locale = $this.data('flag');
+                    $.post('https://romegamart.in/language', { _token: AIZ.data.csrf, locale: locale }, function (data) {
+                        location.reload();
+                    });
+
+                });
+            });
+        }
+
+        if ($('#currency-change').length > 0) {
+            $('#currency-change .dropdown-menu a').each(function () {
+                $(this).on('click', function (e) {
+                    e.preventDefault();
+                    var $this = $(this);
+                    var currency_code = $this.data('currency');
+                    $.post('https://romegamart.in/currency', { _token: AIZ.data.csrf, currency_code: currency_code }, function (data) {
+                        location.reload();
+                    });
+
+                });
+            });
+        }
+    });
+
+    $('#search').on('keyup', function () {
+        search();
+    });
+
+    $('#search').on('focus', function () {
+        search();
+    });
+
+    function search() {
+        var searchKey = $('#search').val();
+        if (searchKey.length > 0) {
+            $('body').addClass("typed-search-box-shown");
+
+            $('.typed-search-box').removeClass('d-none');
+            $('.search-preloader').removeClass('d-none');
+            $.post('https://romegamart.in/ajax-search', { _token: AIZ.data.csrf, search: searchKey }, function (data) {
+                if (data == '0') {
+                    // $('.typed-search-box').addClass('d-none');
+                    $('#search-content').html(null);
+                    $('.typed-search-box .search-nothing').removeClass('d-none').html('Sorry, nothing found for <strong>"' + searchKey + '"</strong>');
+                    $('.search-preloader').addClass('d-none');
+
+                }
+                else {
+                    $('.typed-search-box .search-nothing').addClass('d-none').html(null);
+                    $('#search-content').html(data);
+                    $('.search-preloader').addClass('d-none');
+                }
+            });
+        }
+        else {
+            $('.typed-search-box').addClass('d-none');
+            $('body').removeClass("typed-search-box-shown");
+        }
+    }
+
+    $(".aiz-user-top-menu").on("mouseover", function (event) {
+        $(".hover-user-top-menu").addClass('active');
+    })
+        .on("mouseout", function (event) {
+            $(".hover-user-top-menu").removeClass('active');
+        });
+
+    $(document).on("click", function (event) {
+        var $trigger = $("#category-menu-bar");
+        if ($trigger !== event.target && !$trigger.has(event.target).length) {
+            $("#click-category-menu").slideUp("fast");;
+            $("#category-menu-bar-icon").removeClass('show');
+        }
+    });
+
+    function updateNavCart(view, count) {
+        $('.cart-count').html(count);
+        $('#cart_items').html(view);
+    }
+
+    function removeFromCart(key) {
+        $.post('https://romegamart.in/cart/removeFromCart', {
+            _token: AIZ.data.csrf,
+            id: key
+        }, function (data) {
+            updateNavCart(data.nav_cart_view, data.cart_count);
+            $('#cart-summary').html(data.cart_view);
+            AIZ.plugins.notify('success', "Item has been removed from cart");
+            $('#cart_items_sidenav').html(parseInt($('#cart_items_sidenav').html()) - 1);
+        });
+    }
+
+    function showLoginModal() {
+        $('#login_modal').modal();
+    }
+
+    function addToCompare(id) {
+        $.post('https://romegamart.in/compare/addToCompare', { _token: AIZ.data.csrf, id: id }, function (data) {
+            $('#compare').html(data);
+            AIZ.plugins.notify('success', "Item has been added to compare list");
+            $('#compare_items_sidenav').html(parseInt($('#compare_items_sidenav').html()) + 1);
+        });
+    }
+
+    function addToWishList(id) {
+        AIZ.plugins.notify('warning', "Please login first");
+    }
+
+    function showAddToCartModal(id) {
+        if (!$('#modal-size').hasClass('modal-lg')) {
+            $('#modal-size').addClass('modal-lg');
+        }
+        $('#addToCart-modal-body').html(null);
+        $('#addToCart').modal();
+        $('.c-preloader').show();
+        $.post('https://romegamart.in/cart/show-cart-modal', { _token: AIZ.data.csrf, id: id }, function (data) {
+            $('.c-preloader').hide();
+            $('#addToCart-modal-body').html(data);
+            AIZ.plugins.slickCarousel();
+            AIZ.plugins.zoom();
+            AIZ.extra.plusMinus();
+            getVariantPrice();
+        });
+    }
+
+    $('#option-choice-form input').on('change', function () {
+        getVariantPrice();
+    });
+
+    function getVariantPrice() {
+        if ($('#option-choice-form input[name=quantity]').val() > 0 && checkAddToCartValidity()) {
+            $.ajax({
+                type: "POST",
+                url: 'https://romegamart.in/product/variant-price',
+                data: $('#option-choice-form').serializeArray(),
+                success: function (data) {
+                    $('.product-gallery-thumb .carousel-box').each(function (i) {
+                        if ($(this).data('variation') && data.variation == $(this).data('variation')) {
+                            $('.product-gallery-thumb').slick('slickGoTo', i);
+                        }
+                    })
+
+                    $('#option-choice-form #chosen_price_div').removeClass('d-none');
+                    $('#option-choice-form #chosen_price_div #chosen_price').html(data.price);
+                    $('#available-quantity').html(data.quantity);
+                    $('.input-number').prop('max', data.max_limit);
+                    if (parseInt(data.in_stock) == 0 && data.digital == 0) {
+                        $('.buy-now').addClass('d-none');
+                        $('.add-to-cart').addClass('d-none');
+                        $('.out-of-stock').removeClass('d-none');
+                    }
+                    else {
+                        $('.buy-now').removeClass('d-none');
+                        $('.add-to-cart').removeClass('d-none');
+                        $('.out-of-stock').addClass('d-none');
+                    }
+
+                    AIZ.extra.plusMinus();
+                }
+            });
+        }
+    }
+
+    function checkAddToCartValidity() {
+        var names = {};
+        $('#option-choice-form input:radio').each(function () { // find unique names
+            names[$(this).attr('name')] = true;
+        });
+        var count = 0;
+        $.each(names, function () { // then count them
+            count++;
+        });
+
+        if ($('#option-choice-form input:radio:checked').length == count) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function addToCart() {
+
+        if (checkAddToCartValidity()) {
+            $('#addToCart').modal();
+            $('.c-preloader').show();
+            $.ajax({
+                type: "POST",
+                url: 'https://romegamart.in/cart/addtocart',
+                data: $('#option-choice-form').serializeArray(),
+                success: function (data) {
+                    $('#addToCart-modal-body').html(null);
+                    $('.c-preloader').hide();
+                    $('#modal-size').removeClass('modal-lg');
+                    $('#addToCart-modal-body').html(data.modal_view);
+                    AIZ.extra.plusMinus();
+                    AIZ.plugins.slickCarousel();
+                    updateNavCart(data.nav_cart_view, data.cart_count);
+                }
+            });
+        }
+        else {
+            AIZ.plugins.notify('warning', "Please choose all the options");
+        }
+    }
+
+    function buyNow() {
+
+        if (checkAddToCartValidity()) {
+            $('#addToCart-modal-body').html(null);
+            $('#addToCart').modal();
+            $('.c-preloader').show();
+            $.ajax({
+                type: "POST",
+                url: 'https://romegamart.in/cart/addtocart',
+                data: $('#option-choice-form').serializeArray(),
+                success: function (data) {
+                    if (data.status == 1) {
+                        $('#addToCart-modal-body').html(data.modal_view);
+                        updateNavCart(data.nav_cart_view, data.cart_count);
+                        window.location.replace("https://romegamart.in/cart");
+                    }
+                    else {
+                        $('#addToCart-modal-body').html(null);
+                        $('.c-preloader').hide();
+                        $('#modal-size').removeClass('modal-lg');
+                        $('#addToCart-modal-body').html(data.modal_view);
+                    }
+                }
+            });
+        }
+        else {
+            AIZ.plugins.notify('warning', "Please choose all the options");
+        }
+    }
+
+    function bid_single_modal(bid_product_id, min_bid_amount) {
+        $('#login_modal').modal('show');
+    }
+
+    function clickToSlide(btn, id) {
+        $('#' + id + ' .aiz-carousel').find('.' + btn).trigger('click');
+        $('#' + id + ' .slide-arrow').removeClass('link-disable');
+        var arrow = btn == 'slick-prev' ? 'arrow-prev' : 'arrow-next';
+        if ($('#' + id + ' .aiz-carousel').find('.' + btn).hasClass('slick-disabled')) {
+            $('#' + id).find('.' + arrow).addClass('link-disable');
+        }
+    }
+
+    function goToView(params) {
+        document.getElementById(params).scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function copyCouponCode(code) {
+        navigator.clipboard.writeText(code);
+        AIZ.plugins.notify('success', "Coupon Code Copied");
+    }
+
+    $(document).ready(function () {
+        $('.cart-animate').animate({ margin: 0 }, "slow");
+
+        $({ deg: 0 }).animate({ deg: 360 }, {
+            duration: 2000,
+            step: function (now) {
+                $('.cart-rotate').css({
+                    transform: 'rotate(' + now + 'deg)'
+                });
+            }
+        });
+
+        setTimeout(function () {
+            $('.cart-ok').css({ fill: '#d43533' });
+        }, 2000);
+
+    });
+</script>
+
+<script type="text/javascript">
+    // Country Code
+    var isPhoneShown = true,
+        countryData = window.intlTelInputGlobals.getCountryData(),
+        input = document.querySelector("#phone-code");
+
+    for (var i = 0; i < countryData.length; i++) {
+        var country = countryData[i];
+        if (country.iso2 == 'bd') {
+            country.dialCode = '88';
+        }
+    }
+
+    var iti = intlTelInput(input, {
+        separateDialCode: true,
+        utilsScript: "https://romegamart.in/public/assets/js/intlTelutils.js?1590403638580",
+        onlyCountries: ["IN"],
+        customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+            if (selectedCountryData.iso2 == 'bd') {
+                return "01xxxxxxxxx";
+            }
+            return selectedCountryPlaceholder;
+        }
+    });
+
+    var country = iti.getSelectedCountryData();
+    $('input[name=country_code]').val(country.dialCode);
+
+    input.addEventListener("countrychange", function (e) {
+        // var currentMask = e.currentTarget.placeholder;
+        var country = iti.getSelectedCountryData();
+        $('input[name=country_code]').val(country.dialCode);
+
+    });
+
+    function toggleEmailPhone(el) {
+        if (isPhoneShown) {
+            $('.phone-form-group').addClass('d-none');
+            $('.email-form-group').removeClass('d-none');
+            $('input[name=phone]').val(null);
+            isPhoneShown = false;
+            $(el).html('*Use Phone Instead');
+        } else {
+            $('.phone-form-group').removeClass('d-none');
+            $('.email-form-group').addClass('d-none');
+            $('input[name=email]').val(null);
+            isPhoneShown = true;
+            $(el).html('<i>*Use Email Instead</i>');
+        }
+    }
+</script>
+
+<script>
+    var acc = document.getElementsByClassName("aiz-accordion-heading");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    function filter() {
+        $('#search-form').submit();
+    }
+    function rangefilter(arg) {
+        $('input[name=min_price]').val(arg[0]);
+        $('input[name=max_price]').val(arg[1]);
+        filter();
+    }
+</script>
+
+{%endblock%}
