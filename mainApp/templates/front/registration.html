@@ -1,196 +1,269 @@
 {% extends "front/brands.html" %}
 {%load static%}
 {%block body%}
-    <section class="gry-bg py-6">
-        <div class="profile">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-9 col-lg-10 mx-auto">
-                        <div class="card shadow-none rounded-0 border">
-                            <div class="row">
-                                <!-- Left Side -->
-                                <div class="col-lg-6 col-md-7 p-4 p-lg-5">
-                                    <!-- Titles -->
-                                    <div class="text-center">
-                                        <h1 class="fs-20 fs-md-24 fw-700 text-primary">Create an account.</h1>
-                                    </div>
-                                    <!-- Register form -->
-                                    <div class="pt-3 pt-lg-4">
-                                        <div class="">
-                                            <form id="reg-form" class="form-default" role="form" action="https://romegamart.in/register" method="POST" enctype="multipart/form-data">
-                                                <input type="hidden" name="_token" value="57TijdjBwiFOl6AxJWsm2QZu8YuPyYdrCvYdpDJX">                                                <!-- Name -->
-                                                <div class="form-group">
-                                                    <label for="name" class="fs-12 fw-700 text-soft-dark">Full Name <span class="text-primary">*</span></label>
-                                                    <input type="text" class="form-control rounded-0" required value="" placeholder="Full Name" name="name" required>
-                                                                                                    </div>
+<script>
+    function validateForm() {
+        var email = document.getElementById("phone-code").value;
+        var p1 = document.getElementById("password1").value;
+        var p2 = document.getElementById("password2").value;
 
-                                                <!-- Email or Phone -->
-                                                   <!-- Email or Phone -->
-                                                                                                    <div class="form-group phone-form-group mb-1">
-                                                        <label for="phone" class="fs-12 fw-700 text-soft-dark">Phone</label>
-                                                        <input type="tel" id="phone-code" class="form-control rounded-0" value="" placeholder="" name="phone" autocomplete="off"  minlength="10" maxlength="10"> 
-                                                    </div>
+        if (p1!=p2) {
+            alert("Password and Confirm Password Not Same");
+            return false; // Prevent form submission
+        }
+        
+    
 
-                                                    <input type="hidden" name="country_code" value="">
+        // Extract usernames from the 'unames' object
+        var existingUsernames = [];
+        {% for item in uname %}
+        existingUsernames.push('{{ item.username }}');
+        {% endfor %}
 
-                                                    <div class="form-group email-form-group mb-1 d-none">
-                                                        <label for="email" class="fs-12 fw-700 text-soft-dark">Email</label>
-                                                        <input type="email" class="form-control rounded-0 " value="" placeholder="Email" name="email"  autocomplete="off">
-                                                                                                            </div>
+        // Check if the entered username already exists in the 'existingUsernames' array
+        if (existingUsernames.includes(email)) {
+            alert("Phone already Exist.");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission if all validations pass
+    }
 
-                                                    <div class="form-group text-right">
-                                                        <button class="btn btn-link p-0 text-primary" type="button" onclick="toggleEmailPhone(this)"><i>*Use Email Instead</i></button>
-                                                    </div>
-                                                
 
-											<!--	<div class="form-group">
+</script>
+{%if msg%}
+<script>
+    alert("You have been registered successfully...")
+    window.location.href = "/users/login"; 
+</script>
+{%endif%}
+<section class="gry-bg py-6">
+    <div class="profile">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="card shadow-none rounded-0 border">
+                        <div class="row">
+                            <!-- Left Side -->
+                            <div class="col-lg-6 col-md-7 p-4 p-lg-5">
+                                <!-- Titles -->
+                                <div class="text-center">
+                                    <h1 class="fs-20 fs-md-24 fw-700 text-primary">Create an account.</h1>
+                                </div>
+                                <!-- Register form -->
+                                <div class="pt-3 pt-lg-4">
+                                    <div class="">
+                                        <form  class="form-default" method="POST" enctype="multipart/form-data"  onsubmit="return validateForm();">
+                                            {%csrf_token%}
+                                            
+                                            <div class="form-group">
+                                                <label for="name" class="fs-12 fw-700 text-soft-dark">Full Name <span
+                                                        class="text-primary">*</span></label>
+                                                <input type="text" class="form-control rounded-0" required value=""
+                                                    placeholder="Full Name" name="name" required>
+                                            </div>
+
+                                            <!-- Email or Phone -->
+                                            <!-- Email or Phone -->
+                                            <div class="form-group phone-form-group mb-1">
+                                                <label for="phone" class="fs-12 fw-700 text-soft-dark">Phone</label>
+                                                <input type="tel" id="phone-code" class="form-control rounded-0"
+                                                    value=""  name="phone" autocomplete="off"
+                                                    minlength="10" maxlength="10" placeholder="Enter Phone">
+                                            </div>
+
+                                           
+
+                                            <div class="form-group email-form-group mb-1">
+                                                <label for="email" class="fs-12 fw-700 text-soft-dark">Email</label>
+                                                <input type="email" class="form-control rounded-0 " value=""
+                                                    placeholder="Email" name="email" autocomplete="off">
+                                            </div>
+
+                                            {% comment %} <div class="form-group text-right">
+                                                <button class="btn btn-link p-0 text-primary" type="button"
+                                                    onclick="toggleEmailPhone(this)"><i>*Use Email Instead</i></button>
+                                            </div> {% endcomment %}
+
+
+                                            <!--	<div class="form-group">
                                                         <label for="email2" class="fs-12 fw-700 text-soft-dark">Email <span class="text-primary">*</span></label>
                                                         <input type="email2" class="form-control rounded-0" value="" placeholder="email" name="email"  autocomplete="off" required>
 
                                                     </div>-->
 
-                                                    <div class="form-group">
-                                                        <label for="address" class="fs-12 fw-700 text-soft-dark">Address <span class="text-primary">*</span></label>
-                                                        <input type="text" class="form-control rounded-0" placeholder="Address" name="address" id="address" autocomplete="off" required>
+                                            <div class="form-group">
+                                                <label for="address" class="fs-12 fw-700 text-soft-dark">Address <span
+                                                        class="text-primary">*</span></label>
+                                                <input type="text" class="form-control rounded-0" placeholder="Address"
+                                                    name="address" id="address" autocomplete="off" required>
 
-                                                    </div>
+                                            </div>
 
-                                                    <div class="form-group">
-                                                        <label for="city" class="fs-12 fw-700 text-soft-dark">City <span class="text-primary">*</span></label>
-                                                        <input type="text" class="form-control rounded-0"  placeholder="City" name="city" id="city" pattern="[a-zA-Z\s]+" autocomplete="off" required>
+                                            <div class="form-group">
+                                                <label for="city" class="fs-12 fw-700 text-soft-dark">City <span
+                                                        class="text-primary">*</span></label>
+                                                <input type="text" class="form-control rounded-0" placeholder="City"
+                                                    name="city" id="city" pattern="[a-zA-Z\s]+" autocomplete="off"
+                                                    required>
 
-                                                    </div>
+                                            </div>
 
-                                                    <div class="form-group">
-                                                        <label for="postal_code" class="fs-12 fw-700 text-soft-dark">Pincode <span class="text-primary">*</span></label>
-                                                        <input type="number" class="form-control rounded-0" placeholder="Pincode" name="postal_code" id="postal_code" autocomplete="off" required>
+                                            <div class="form-group">
+                                                <label for="postal_code" class="fs-12 fw-700 text-soft-dark">Pincode
+                                                    <span class="text-primary">*</span></label>
+                                                <input type="number" class="form-control rounded-0"
+                                                    placeholder="Pincode" name="pin" id="postal_code"
+                                                    autocomplete="off" required>
 
-                                                    </div>
+                                            </div>
 
-                                                <!-- password -->
-                                                <div class="form-group">
-                                                    <label for="password" class="fs-12 fw-700 text-soft-dark">Password <span class="text-primary">*</span></label>
-                                                    <input type="password" class="form-control rounded-0" required placeholder="Password" name="password">
-                                                    <div class="text-right mt-1">
-                                                        <span class="fs-12 fw-400 text-gray-dark">Password must contain at least 6 digits</span>
-                                                    </div>
-                                                                                                    </div>
-
-                                                <!-- password Confirm -->
-                                                <div class="form-group">
-                                                    <label for="password_confirmation" class="fs-12 fw-700 text-soft-dark">Confirm Password <span class="text-primary">*</span></label>
-                                                    <input type="password" class="form-control rounded-0" required placeholder="Confirm Password" name="password_confirmation" required>
+                                            <!-- password -->
+                                            <div class="form-group">
+                                                <label for="password" class="fs-12 fw-700 text-soft-dark">Password <span
+                                                        class="text-primary">*</span></label>
+                                                <input type="password" class="form-control rounded-0" required
+                                                    placeholder="Password" name="password" id="password1">
+                                                <div class="text-right mt-1">
+                                                    <span class="fs-12 fw-400 text-gray-dark">Password must contain at
+                                                        least 6 digits</span>
                                                 </div>
+                                            </div>
+
+                                            <!-- password Confirm -->
+                                            <div class="form-group">
+                                                <label for="password_confirmation"
+                                                    class="fs-12 fw-700 text-soft-dark">Confirm Password <span
+                                                        class="text-primary">*</span></label>
+                                                <input type="password" class="form-control rounded-0" required
+                                                    placeholder="Confirm Password" name="cpassword" id="password2"
+                                                    required>
+                                            </div>
 
 
-                                                <div class="form-group">
-                                                        <label for="email" class="fs-12 fw-700 text-soft-dark">Addhar Card <span class="text-primary">*</span></label>
-                                                        <input type="file" class="form-control rounded-0" accept=".pdf,.jpg,.png" required value="" placeholder="Addhar Card" name="aadhar_card" id="aadhar_card" autocomplete="off" required>
+                                            <div class="form-group">
+                                                <label for="email" class="fs-12 fw-700 text-soft-dark">Addhar Card <span
+                                                        class="text-primary">*</span></label>
+                                                <input type="file" class="form-control rounded-0"
+                                                    accept=".pdf,.jpg,.png" required value="" placeholder="Addhar Card"
+                                                    name="aadhar" id="aadhar" autocomplete="off" required>
 
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="email" class="fs-12 fw-700 text-soft-dark">Pan Card <span class="text-primary">*</span></label>
-                                                        <input type="file" class="form-control rounded-0" accept=".pdf,.jpg,.png" required value="" placeholder="Pan Card" name="pan_card"  autocomplete="off" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="fs-12 fw-700 text-soft-dark">Pan Card <span
+                                                        class="text-primary">*</span></label>
+                                                <input type="file" class="form-control rounded-0"
+                                                    accept=".pdf,.jpg,.png" required value="" placeholder="Pan Card"
+                                                    name="pan" autocomplete="off" required>
 
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="email" class="fs-12 fw-700 text-soft-dark">Cancelled Check <span class="text-primary">*</span></label>
-                                                        <input type="file" class="form-control rounded-0" accept=".pdf,.jpg,.png" value="" required placeholder="Cancelled Check" name="cancelled_check"  autocomplete="off" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="fs-12 fw-700 text-soft-dark">Cancelled Check
+                                                    <span class="text-primary">*</span></label>
+                                                <input type="file" class="form-control rounded-0"
+                                                    accept=".pdf,.jpg,.png" value="" required
+                                                    placeholder="Cancelled Check" name="cancelled_check"
+                                                    autocomplete="off" required>
 
-                                                    </div>
+                                            </div>
 
-                                                <!-- Recaptcha -->
-                                                
-                                                <!-- Terms and Conditions -->
-                                                <div class="mb-3">
-                                                    <label class="aiz-checkbox">
-                                                        <input type="checkbox" name="checkbox_example_1" required>
-                                                        <span class="">By signing up you agree to our <a href="https://romegamart.in/terms" class="fw-500">terms and conditions</a></span>
-                                                        <span class="aiz-square-check"></span>
-                                                    </label>
-                                                </div>
+                                            <!-- Recaptcha -->
 
-                                                <!-- Submit Button -->
-                                                <div class="mb-4 mt-4">
-                                                    <button type="submit" class="btn btn-primary btn-block fw-600 rounded-4">Create Account</button>
-                                                </div>
-                                            </form>
+                                            <!-- Terms and Conditions -->
+                                            <div class="mb-3">
+                                                <label class="aiz-checkbox">
+                                                    <input type="checkbox" name="checkbox_example_1" required>
+                                                    <span class="">By signing up you agree to our <a
+                                                            href="https://romegamart.in/terms" class="fw-500">terms and
+                                                            conditions</a></span>
+                                                    <span class="aiz-square-check"></span>
+                                                </label>
+                                            </div>
 
-                                            <!-- Social Login -->
-                                                                                    </div>
+                                            <!-- Submit Button -->
+                                            <div class="mb-4 mt-4">
+                                                <button type="submit"
+                                                    class="btn btn-primary btn-block fw-600 rounded-4">Create
+                                                    Account</button>
+                                            </div>
+                                        </form>
 
-                                        <!-- Log In -->
-                                        <div class="text-center">
-                                            <p class="fs-12 text-gray mb-0">Already have an account?</p>
-                                            <a href="https://romegamart.in/users/login" class="fs-14 fw-700 animate-underline-primary">Log In</a>
-                                        </div>
+                                        <!-- Social Login -->
+                                    </div>
+
+                                    <!-- Log In -->
+                                    <div class="text-center">
+                                        <p class="fs-12 text-gray mb-0">Already have an account?</p>
+                                        <a href="/users/login"
+                                            class="fs-14 fw-700 animate-underline-primary">Log In</a>
                                     </div>
                                 </div>
+                            </div>
 
-                                <!-- Right Side Image -->
-                                <div class="col-lg-6 col-md-5 py-3 py-md-0">
-                                    <img src="https://romegamart.in/public/uploads/all/VS2Y1sZwDCGJs7HvUsI3EGfRpofXsQNQweg4V9UP.jpg" alt="" class="img-fit h-100">
-                                </div>
+                            <!-- Right Side Image -->
+                            <div class="col-lg-6 col-md-5 py-3 py-md-0">
+                                <img src="https://romegamart.in/public/uploads/all/VS2Y1sZwDCGJs7HvUsI3EGfRpofXsQNQweg4V9UP.jpg"
+                                    alt="" class="img-fit h-100">
                             </div>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <script type="text/javascript">
-        // Country Code
-        var isPhoneShown = true,
-            countryData = window.intlTelInputGlobals.getCountryData(),
-            input = document.querySelector("#phone-code");
-    
-        for (var i = 0; i < countryData.length; i++) {
-            var country = countryData[i];
-            if (country.iso2 == 'bd') {
-                country.dialCode = '88';
-            }
+<script type="text/javascript">
+    // Country Code
+    var isPhoneShown = true,
+        countryData = window.intlTelInputGlobals.getCountryData(),
+        input = document.querySelector("#phone-code");
+
+    for (var i = 0; i < countryData.length; i++) {
+        var country = countryData[i];
+        if (country.iso2 == 'bd') {
+            country.dialCode = '88';
         }
-    
-        var iti = intlTelInput(input, {
-            separateDialCode: true,
-            utilsScript: "/public/assets/js/intlTelutils.js?1590403638580",
-            onlyCountries: ["IN"],
-            customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
-                if (selectedCountryData.iso2 == 'bd') {
-                    return "01xxxxxxxxx";
-                }
-                return selectedCountryPlaceholder;
+    }
+
+    var iti = intlTelInput(input, {
+        separateDialCode: true,
+        utilsScript: "/public/assets/js/intlTelutils.js?1590403638580",
+        onlyCountries: ["IN"],
+        customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+            if (selectedCountryData.iso2 == 'bd') {
+                return "01xxxxxxxxx";
             }
-        });
-    
+            return selectedCountryPlaceholder;
+        }
+    });
+
+    var country = iti.getSelectedCountryData();
+    $('input[name=country_code]').val(country.dialCode);
+
+    input.addEventListener("countrychange", function (e) {
+        // var currentMask = e.currentTarget.placeholder;
         var country = iti.getSelectedCountryData();
         $('input[name=country_code]').val(country.dialCode);
-    
-        input.addEventListener("countrychange", function (e) {
-            // var currentMask = e.currentTarget.placeholder;
-            var country = iti.getSelectedCountryData();
-            $('input[name=country_code]').val(country.dialCode);
-    
-        });
-    
-        function toggleEmailPhone(el) {
-            if (isPhoneShown) {
-                $('.phone-form-group').addClass('d-none');
-                $('.email-form-group').removeClass('d-none');
-                $('input[name=phone]').val(null);
-                isPhoneShown = false;
-                $(el).html('*Use Phone Instead');
-            } else {
-                $('.phone-form-group').removeClass('d-none');
-                $('.email-form-group').addClass('d-none');
-                $('input[name=email]').val(null);
-                isPhoneShown = true;
-                $(el).html('<i>*Use Email Instead</i>');
-            }
+
+    });
+
+    function toggleEmailPhone(el) {
+        if (isPhoneShown) {
+            $('.phone-form-group').addClass('d-none');
+            $('.email-form-group').removeClass('d-none');
+            $('input[name=phone]').val(null);
+            isPhoneShown = false;
+            $(el).html('*Use Phone Instead');
+        } else {
+            $('.phone-form-group').removeClass('d-none');
+            $('.email-form-group').addClass('d-none');
+            $('input[name=email]').val(null);
+            isPhoneShown = true;
+            $(el).html('<i>*Use Email Instead</i>');
         }
-    </script>
-    
-    {%endblock%}
+    }
+</script>
+
+{%endblock%}

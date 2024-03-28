@@ -58,39 +58,11 @@
     <link rel="stylesheet" href="{%static 'css/vendors.css'%}">
     <link rel="stylesheet" href="{%static 'css/aiz-core.css'%}">
     <link rel="stylesheet" href="{%static 'css/custom-style.css'%}">
-
-
     <style>
         body {
             font-size: 12px;
         }
     </style>
-    <script>
-        var AIZ = AIZ || {};
-        AIZ.local = {
-            nothing_selected: 'Nothing selected',
-            nothing_found: 'Nothing found',
-            choose_file: 'Choose File',
-            file_selected: 'File selected',
-            files_selected: 'Files selected',
-            add_more_files: 'Add more files',
-            adding_more_files: 'Adding more files',
-            drop_files_here_paste_or: 'Drop files here, paste or',
-            browse: 'Browse',
-            upload_complete: 'Upload complete',
-            upload_paused: 'Upload paused',
-            resume_upload: 'Resume upload',
-            pause_upload: 'Pause upload',
-            retry_upload: 'Retry upload',
-            cancel_upload: 'Cancel upload',
-            uploading: 'Uploading',
-            processing: 'Processing',
-            complete: 'Complete',
-            file: 'File',
-            files: 'Files',
-        }
-    </script>
-
 </head>
 
 <body>
@@ -111,22 +83,26 @@
                                         <h1 class="fs-20 fs-md-24 fw-700 text-primary">Welcome Back !</h1>
                                         <h5 class="fs-14 fw-400 text-dark">Login To Your Seller Account</h5>
                                     </div>
-                                    <form class="pad-hor" method="POST" role="form"
-                                        action="https://romegamart.in/login">
-                                        <input type="hidden" name="_token"
-                                            value="57TijdjBwiFOl6AxJWsm2QZu8YuPyYdrCvYdpDJX"> <!-- Email or Phone -->
+                                    {%if msg%}
+                                    <script>
+                                        alert("Invalid Email or Password")
+                                    </script>
+                                    {%endif%}
+                                    <form class="pad-hor" method="post">
+                                       {%csrf_token%} 
+                                       <!-- Email or Phone -->
                                         <div class="form-group">
                                             <label for="email" class="fs-12 fw-500 text-secondary">Email</label>
-                                            <input type="email" class="form-control rounded-0" value=""
+                                            <input type="email" class="form-control rounded-0" 
                                                 placeholder="johndoe@example.com" name="email" id="email"
-                                                autocomplete="off">
+                                                autocomplete="off" required>
                                         </div>
 
                                         <!-- password -->
                                         <div class="form-group">
                                             <label for="password" class="fs-12 fw-500 text-secondary">Password</label>
                                             <input type="password" class="form-control rounded-0 "
-                                                placeholder="Password" name="password" id="password">
+                                                placeholder="Password" name="password" id="password" required>
                                         </div>
 
                                         <div class="row mb-2">
